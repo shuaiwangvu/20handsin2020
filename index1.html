@@ -135,7 +135,7 @@
 
 <div class="img-zoom-container">
   <img id="myimage" src="1.jpg" width=100% >
-  <div id="myresult" class="img-zoom-result"></div>
+  <!-- <div id="myresult" class="img-zoom-result"></div> -->
 </div>
 
 <!-- <p>The image must be placed inside a container with relative positioning.</p>
@@ -152,7 +152,15 @@ imageZoom("myimage", "myresult");
 						<div class="column right">
 
 
+							<div class="img-zoom-container">
+							  <!-- <img id="myimage" src="img_girl.jpg" width="300" height="240"> -->
+							  <div id="myresult" class="img-zoom-result"></div>
+							</div>
 
+							<script>
+							// Initiate zoom effect:
+							imageZoom("myimage", "myresult");
+							</script>
 
 							<p>This is a description.</p>
 <p><button id="showMenu">Show Menu</button></p>
