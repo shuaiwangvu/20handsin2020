@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Perspective Page View Navigation</title>
+		<meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" />
+		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
+		<script src="js/modernizr.custom.25376.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+
+		.left {
+		  width: 75%;
+		}
+
+		.right {
+		  width: 25%;
+		}
+
+/* https://www.w3schools.com/howto/howto_js_image_zoom.asp */
+		* {box-sizing: border-box;}
+
+		.img-zoom-container {
+		  position: relative;
+		}
+
+		.img-zoom-lens {
+		  position: absolute;
+		  border: 0px solid #d4d4d4;
+		  /*set the size of the lens:*/
+		  width: 50px;
+		  height: 50px;
+		}
+
+		.img-zoom-result {
+		  border: 1px solid #d4d4d4;
+		  /*set the size of the result div:*/
+		  width: 300px;
+		  height: 300px
+		}
+		</style>
+		<script>
+		function imageZoom(imgID, resultID) {
+		  var img, lens, result, cx, cy;
+		  img = document.getElementById(imgID);
+		  result = document.getElementById(resultID);
+		  /*create lens:*/
+		  lens = document.createElement("DIV");
+		  lens.setAttribute("class", "img-zoom-lens");
+		  /*insert lens:*/
+		  img.parentElement.insertBefore(lens, img);
+		  /*calculate the ratio between result DIV and lens:*/
+		  cx = result.offsetWidth / lens.offsetWidth;
+		  cy = result.offsetHeight / lens.offsetHeight;
+		  /*set background properties for the result DIV:*/
+		  result.style.backgroundImage = "url('" + img.src + "')";
+		  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+		  /*execute a function when someone moves the cursor over the image, or the lens:*/
+		  lens.addEventListener("mousemove", moveLens);
+		  img.addEventListener("mousemove", moveLens);
+		  /*and also for touch screens:*/
+		  lens.addEventListener("touchmove", moveLens);
+		  img.addEventListener("touchmove", moveLens);
+		  function moveLens(e) {
+		    var pos, x, y;
+		    /*prevent any other actions that may occur when moving over the image:*/
+		    e.preventDefault();
+		    /*get the cursor's x and y positions:*/
+		    pos = getCursorPos(e);
+		    /*calculate the position of the lens:*/
+		    x = pos.x - (lens.offsetWidth / 2);
+		    y = pos.y - (lens.offsetHeight / 2);
+		    /*prevent the lens from being positioned outside the image:*/
+		    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+		    if (x < 0) {x = 0;}
+		    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+		    if (y < 0) {y = 0;}
+		    /*set the position of the lens:*/
+		    lens.style.left = x + "px";
+		    lens.style.top = y + "px";
+		    /*display what the lens "sees":*/
+		    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+		  }
+		  function getCursorPos(e) {
+		    var a, x = 0, y = 0;
+		    e = e || window.event;
+		    /*get the x and y positions of the image:*/
+		    a = img.getBoundingClientRect();
+		    /*calculate the cursor's x and y coordinates, relative to the image:*/
+		    x = e.pageX - a.left;
+		    y = e.pageY - a.top;
+		    /*consider any page scrolling:*/
+		    x = x - window.pageXOffset;
+		    y = y - window.pageYOffset;
+		    return {x : x, y : y};
+		  }
+		}
+		</script>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-movedown">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<div class="codrops-top clearfix">
+						<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/ProgressButtonStyles/"><span>Previous Demo</span></a>
+						<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=17915"><span>Back to the Codrops Article</span></a></span>
+					</div>
+					<header class="codrops-header">
+						<h1>20 hands in 2020</h1>
+						<!-- <h1>20 hands in 2020 <span>Transforms the page in 3D to reveal a menu</span></h1>	 -->
+					</header>
+					<div class="main clearfix">
+
+						<div class="column left">
+							<!-- <nav class="codrops-demos">
+								<a href="index.html">Airbnb Effect</a>
+								<a href="index2.html">Move Left</a>
+								<a href="index3.html">Rotate Left</a>
+								<a href="index4.html" class="current-demo">Move Down</a>
+								<a href="index5.html">Rotate Top</a>
+								<a href="index6.html">Lay Down</a>
+							</nav> -->
+
+
+<div class="img-zoom-container">
+  <img id="myimage" src="1.jpg" width=100% >
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+<!-- <p>The image must be placed inside a container with relative positioning.</p>
+<p>The result can be put anywhere on the page, but must have the class name "img-zoom-result".</p>
+<p>Make sure both the image and the result have IDs. These IDs are used when a javaScript initiates the zoom effect.</p> -->
+
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+						</div>
+
+
+						<div class="column right">
+
+
+
+
+							<p>This is a description.</p>
+<p><button id="showMenu">Show Menu</button></p>
+</div>
+
+						<div class="related">
+							<!-- <p>If you enjoyed this demo you might also like:</p>
+							<p><a href="http://tympanus.net/Tutorials/AnimatedBorderMenus/">Animated Border Menus</a></p>
+							<p><a href="http://tympanus.net/Development/SidebarTransitions/">Transitions for Off-Canvas Navigations</a></p> -->
+						</div>
+					</div><!-- /main -->
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+			<nav class="outer-nav top horizontal">
+				<a href="#" class="icon-home">Home</a>
+				<a href="#" class="icon-news">News</a>
+				<a href="#" class="icon-image">Images</a>
+				<a href="#" class="icon-upload">Uploads</a>
+				<a href="#" class="icon-star">Favorites</a>
+				<a href="#" class="icon-mail">Messages</a>
+				<a href="#" class="icon-lock">Security</a>
+			</nav>
+		</div><!-- /perspective -->
+		<script src="js/classie.js"></script>
+		<script src="js/menu.js"></script>
+	</body>
+</html>
