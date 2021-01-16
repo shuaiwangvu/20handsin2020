@@ -5,7 +5,7 @@
 .container {
   /* width: 90%; */
 margin: 3%;
-  min-height: 100vh;
+  min-height: 90vh;
   /* background: #333; */
 }
 .image {
@@ -13,7 +13,7 @@ margin: 3%;
   width: 95%;
   position: absolute;
   left: 57%;
-  top:50%;
+  top:40%;
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
 }
