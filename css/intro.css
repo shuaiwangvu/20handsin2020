@@ -4,13 +4,13 @@
 }
 .container {
   /* width: 90%; */
-margin: 5%;
+margin: 3%;
   min-height: 100vh;
   /* background: #333; */
 }
 .image {
   perspective: 3000px;
-  width: 85%;
+  width: 95%;
   position: absolute;
   left: 50%;
   top:50%;
