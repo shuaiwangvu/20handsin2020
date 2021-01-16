@@ -12,7 +12,7 @@ margin: 3%;
   perspective: 3000px;
   width: 95%;
   position: absolute;
-  left: 50%;
+  left: 57%;
   top:50%;
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
