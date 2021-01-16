@@ -5,7 +5,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #333;
+  /* background: #333; */
 }
 .image {
   /* perspective: 3000px; */
