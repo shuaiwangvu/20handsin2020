@@ -8,8 +8,8 @@
   background: #333;
 }
 .image {
-  perspective: 3000px;
-  width: 65%;
+  /* perspective: 3000px; */
+  /* width: 85%; */
   position: absolute;
   left: 50%;
   top:50%;
