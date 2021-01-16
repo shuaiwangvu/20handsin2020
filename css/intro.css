@@ -3,13 +3,14 @@
   margin: 0;
 }
 .container {
-  width: 100%;
+  /* width: 90%; */
+margin: 5%;
   min-height: 100vh;
   /* background: #333; */
 }
 .image {
-  /* perspective: 3000px; */
-  /* width: 85%; */
+  perspective: 3000px;
+  width: 85%;
   position: absolute;
   left: 50%;
   top:50%;
@@ -18,7 +19,8 @@
 }
 .image img {
   transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
-  box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+	width: 85%;
+  box-shadow: -40px 30px 15px 5px rgba(0,0,0,0.4);
   transition: all .4s;
   transform-style: preserve-3d;
 }
