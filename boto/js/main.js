@@ -1,6 +1,6 @@
 /* ===================================
 --------------------------------------
-	Boto | Photography HTML Template
+	Shuai Wang | 20HandsIn2020
 	Version: 1.0
 	Copyright By: ColorLib
 --------------------------------------
@@ -35,7 +35,7 @@ $(window).on('load', function() {
 		e.preventDefault();
         $(".slicknav_btn").click();
 	});
-	
+
 	$('.nav__menu').slicknav({
 		'appendTo' : '.main__menu',
 		'openedSymbol': '<i class="fa fa-angle-up"></i>',
@@ -82,7 +82,7 @@ $(window).on('load', function() {
 			}
 		]
 	});
-	
+
 	var hero_slider = $('.hero-slider');
 
 	hero_slider.on('wheel', (function(e) {
