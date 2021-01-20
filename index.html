@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+		p {
+			text-align: center;
+			font-size: 30px;
+			margin-top: 0px;
+		}
 
 
-	p {
-	  text-align: center;
-	  font-size: 30px;
-	  margin-top: 0px;
-	}
+		* {
+			box-sizing: border-box;
+		}
+
+		/* Create two unequal columns that floats next to each other */
+		.column {
+			float: left;
+			padding: 10px;
+			height: 102vh;
+			/* Should be removed. Only for demonstration */
+		}
 
 
-	* {
-	  box-sizing: border-box;
-	}
-
-	/* Create two unequal columns that floats next to each other */
-	.column {
-	  float: left;
-	  padding: 10px;
-	  height: 102vh; /* Should be removed. Only for demonstration */
-	}
-
-
-/* Clear floats after the columns */
+		/* Clear floats after the columns */
 
 		.left {
-		  width: 75%;
+			width: 75%;
 		}
 
 		.right {
-		  width: 25%;
+			width: 25%;
 		}
 
 		/* Clear floats after the columns */
 		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
+			content: "";
+			display: table;
+			clear: both;
 		}
-
-		</style>
-		<title>20 hands in 2020</title>
-		<meta name="description" content="20 hands in 2020 - an exhibition by Shuai Wang." />
-		<!-- <meta charset="UTF-8" />
+	</style>
+	<title>20 hands in 2020</title>
+	<meta name="description" content="20 hands in 2020 - an exhibition by Shuai Wang." />
+	<!-- <meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Perspective Page View Navigation</title>
@@ -53,108 +52,117 @@
 		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico"> -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
-		<link rel="stylesheet" type="text/css" href="css/intro.css" />
-		<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-		<!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
-		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
-		<!-- <script src="js/modernizr.custom.25376.js"></script> -->
-	</head>
-	<body style="background-color:#F0F0F0;">
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/demo.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/intro.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+	<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load -->
+	<!-- <script src="js/modernizr.custom.25376.js"></script> -->
+</head>
+
+<body style="background-color:#F0F0F0;">
 
 
-<!-- copied from -->
-<!-- https://freefrontend.com/css-image-effects/ -->
-		<div class="row">
-		  <!-- <div class="column left" style="background-color:#aaa;"> -->
-			  <div class="container animate__animated animate__tada animate__repeat-2 animate__delay-2s infinite">
-<center>
-     	   	 <div class="image" >
-     	   	   <img src="./images/1.jpg" class="img" alt="">
-     	   	 </div>
-</center>
-     	      </div>
-		  <!-- </div> -->
-		  <!-- <div class="column right" style="background-color:#bbb;"> -->
+	<!-- copied from -->
+	<!-- https://freefrontend.com/css-image-effects/ -->
+	<div class="row">
+		<!-- <div class="column left" style="background-color:#aaa;"> -->
+		<div class="container animate__animated animate__tada animate__repeat-2 animate__delay-2s infinite">
+			<center>
+				<div class="image">
+					<img src="./images/1.jpg" class="img" alt="">
+				</div>
+			</center>
+		</div>
+		<!-- </div> -->
+		<!-- <div class="column right" style="background-color:#bbb;"> -->
 
-<div class="container animate__animated animate__fadeInDown animate__delay-1s" style="font-family:verdana">
-<p> Invitation </p>
-<br style="text-align: center;"> 2020 has just passed but we can hardly draw a line that separates it from the present. It has been a year that preyed on the weak and the sick; a year that claimed lives and tested trust; a year filled with division and panic; a year flooded with frustration and isolation. It’s our 2020. </br>
-<br>You are invited to this small exhibition of 12 paintings of 20 hands. Due to restrictions, the amount of visitors in the exhibition room is limited. Please indicate your estimated time of arrival by following the link below. </br>
-<br>The exhibition is free of charge and you may take some paintings home for free. Tips are welcomed.</br>
-<br> Link to registration (choose one slot only please): <a href="https://doodle.com/poll/t72qqdmyqugmsezc?utm_source=poll&utm_medium=link">Link</a> </br>
+		<div class="container animate__animated animate__fadeInDown animate__delay-1s" style="font-family:verdana">
+			<p> Invitation </p>
+			<br style="text-align: center;"> 2020 has just passed but we can hardly draw a line that separates it from the
+			present. It has been a year that preyed on the weak and the sick; a year that claimed lives and tested trust; a
+			year filled with division and panic; a year flooded with frustration and isolation. It’s our 2020. </br>
+			<br>You are invited to this small exhibition of 12 paintings of 20 hands. Due to restrictions, the amount of
+			visitors in the exhibition room is limited. Please indicate your estimated time of arrival by following the link
+			below. </br>
+			<br>The exhibition is free of charge and you may take some paintings home for free. Tips are welcomed.</br>
+			<br> Link to registration (choose one slot only please): <a
+				href="https://doodle.com/poll/t72qqdmyqugmsezc?utm_source=poll&utm_medium=link">Link</a> </br>
 
-<p>Time & Location</p>
-<br>Exhibition time: 12:00 - 18:00, 13th February.
-<br>Address of the Cha x Art Gallery: Eerste Constantijn Huygensstraat 78, 1054 BW, Amsterdam. </br>
+			<p>Time & Location</p>
+			<br>Exhibition time: 12:00 - 18:00, 13th February.
+			<br>Address of the Cha x Art Gallery: Eerste Constantijn Huygensstraat 78, 1054 BW, Amsterdam. </br>
 			<br>Contact if lost: +31 652691901. </br>
-<center>
-			<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-			        var setting = {"height":400,"width":800,"zoom":14,"queryString":"Eerste Constantijn Huygensstraat 78, 1054 BW Amsterdam, Netherlands","place_id":"ChIJRdIRtuYJxkcRD1Kkx11xyV0","satellite":false,"centerCoord":[52.36349282059381,4.874538349999975],"cid":"0x5dc9715dc7a4520f","lang":"en","cityUrl":"/netherlands/amsterdam","cityAnchorText":"Map of Amsterdam, Dutch Coast, Netherlands","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"348091"};
-			        var d = document;
-			        var s = d.createElement('script');
-			        s.src = 'https://1map.com/js/script-for-user.js?embed_id=348091';
-			        s.async = true;
-			        s.onload = function (e) {
-			          window.OneMap.initMap(setting)
-			        };
-			        var to = d.getElementsByTagName('script')[0];
-			        to.parentNode.insertBefore(s, to);
-			      })();</script><a href="https://1map.com/map-embed">1 Map</a></div>
-</center>
+			<br>Add To Your Calendar:</br>
+			<br><a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MnMxYzBvcHVydjluZDVnbGxycnYxNTBpcGYgZHZnMmpvbmYwcTFkMjVqamtldGViY3U5YThAZw&amp;tmsrc=dvg2jonf0q1d25jjketebcu9a8%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a></br>
+			<center>
+				<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+					<script>(function () {
+							var setting = { "height": 400, "width": 800, "zoom": 14, "queryString": "Eerste Constantijn Huygensstraat 78, 1054 BW Amsterdam, Netherlands", "place_id": "ChIJRdIRtuYJxkcRD1Kkx11xyV0", "satellite": false, "centerCoord": [52.36349282059381, 4.874538349999975], "cid": "0x5dc9715dc7a4520f", "lang": "en", "cityUrl": "/netherlands/amsterdam", "cityAnchorText": "Map of Amsterdam, Dutch Coast, Netherlands", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "348091" };
+							var d = document;
+							var s = d.createElement('script');
+							s.src = 'https://1map.com/js/script-for-user.js?embed_id=348091';
+							s.async = true;
+							s.onload = function (e) {
+								window.OneMap.initMap(setting)
+							};
+							var to = d.getElementsByTagName('script')[0];
+							to.parentNode.insertBefore(s, to);
+						})();</script><a href="https://1map.com/map-embed">1 Map</a>
+				</div>
+			</center>
 
 
 
 
-<!-- <a href="index1.html">Exhibition Online!</a> -->
-<p>Exhibition Online!</p>
+			<!-- <a href="index1.html">Exhibition Online!</a> -->
+			<p>Exhibition Online!</p>
 
-<br> Can't make it in person this time? Time until the exhibition online: </br><p id="demo"></p>
+			<br> Can't make it in person this time? Time until the exhibition online: </br>
+			<p id="demo"></p>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Feb 13, 2021 23:00:00").getTime();
+			<script>
+				// Set the date we're counting down to
+				var countDownDate = new Date("Feb 13, 2021 23:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+				// Update the count down every 1 second
+				var x = setInterval(function () {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+					// Get today's date and time
+					var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+					// Find the distance between now and the count down date
+					var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+					// Time calculations for days, hours, minutes and seconds
+					var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+					// Output the result in an element with id="demo"
+					document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+						+ minutes + "m " + seconds + "s ";
 
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-		  </div>
+					// If the count down is over, write some text
+					if (distance < 0) {
+						clearInterval(x);
+						document.getElementById("demo").innerHTML = "EXPIRED";
+					}
+				}, 1000);
+			</script>
+		</div>
 		<!-- </div> -->
 
-</div>
+	</div>
 
-		<!-- </div> -->
-
-
+	<!-- </div> -->
 
 
-	</body>
+
+
+</body>
+
 </html>
