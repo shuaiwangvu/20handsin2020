@@ -1,3 +1,8 @@
+
+Exhibition 20 hands in 2020:
+https://shuai.nl/hands/
+
+Based on template 
 Perspective Page View Navigation
 =========
 
